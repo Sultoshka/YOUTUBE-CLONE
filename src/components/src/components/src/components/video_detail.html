@@ -1,0 +1,8 @@
+<h2>{{ video.video_title }}</h2>
+<p>{{ video.video_content }}</p>
+<h3>Комментарии</h3>
+{% for comment in comments %}
+    <p>{{ comment.comment_text }}</p>
+{% endfor %}
+<a href="{% url 'add_comment' video.pk %}">Добавить комментарий</a>
+<a href="{% url 'video_list' %}">Назад к списку видео</a>
